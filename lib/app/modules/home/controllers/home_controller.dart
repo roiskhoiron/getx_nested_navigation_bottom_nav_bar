@@ -83,16 +83,16 @@ class HomeController extends GetxController {
     currentIndex.value = value;
     switch (value) {
       case 0:
-        Get.toNamed(Routes.DASHBOARD, id: 1);
+        Get.toNamed(Routes.DASHBOARD, id: Routes.NESTED_NAV_KEY);
         break;
       case 1:
-        Get.toNamed(Routes.BROWSE, id: 1);
+        Get.toNamed(Routes.BROWSE, id: Routes.NESTED_NAV_KEY);
         break;
       case 2:
-        Get.toNamed(Routes.HISTORY, id: 1);
+        Get.toNamed(Routes.HISTORY, id: Routes.NESTED_NAV_KEY);
         break;
       case 3:
-        Get.toNamed(Routes.SETTINGS, id: 1);
+        Get.toNamed(Routes.SETTINGS, id: Routes.NESTED_NAV_KEY);
         break;
       default:
     }

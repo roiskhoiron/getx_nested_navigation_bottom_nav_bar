@@ -28,31 +28,31 @@ class AppPages {
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
-    // GetPage(
-    //   name: _Paths.SETTINGS,
-    //   page: () => const SettingsView(),
-    //   binding: SettingsBinding(),
-    // ),
-    // GetPage(
-    //   name: _Paths.BROWSE,
-    //   page: () => const BrowseView(),
-    //   binding: BrowseBinding(),
-    // ),
-    // GetPage(
-    //   name: _Paths.HISTORY,
-    //   page: () => const HistoryView(),
-    //   binding: HistoryBinding(),
-    // ),
-    // GetPage(
-    //   name: _Paths.DASHBOARD,
-    //   page: () => const DashboardView(),
-    //   binding: DashboardBinding(),
-    // ),
-    // GetPage(
-    //   name: _Paths.NESTED_FIRST,
-    //   page: () => const NestedFirstView(),
-    //   binding: NestedFirstBinding(),
-    // ),
+    GetPage(
+      name: _Paths.SETTINGS,
+      page: () => const SettingsView(),
+      binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.BROWSE,
+      page: () => const BrowseView(),
+      binding: BrowseBinding(),
+    ),
+    GetPage(
+      name: _Paths.HISTORY,
+      page: () => const HistoryView(),
+      binding: HistoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.DASHBOARD,
+      page: () => const DashboardView(),
+      binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: _Paths.NESTED_FIRST,
+      page: () => const NestedFirstView(),
+      binding: NestedFirstBinding(),
+    ),
     GetPage(
       name: _Paths.OUTHER_PAGE,
       page: () => const OutherPageView(),

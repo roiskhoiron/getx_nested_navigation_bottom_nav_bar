@@ -4,13 +4,20 @@ class DashboardController extends GetxController {
   //TODO: Implement DashboardController
 
   final count = 0.obs;
+
+  var valueChange = 'aku'.obs;
   @override
   void onInit() {
+    Get.log('DashboardController onInit');
     super.onInit();
   }
 
   @override
-  void onReady() {
+  Future<void> onReady() async {
+    await Future.delayed(Duration(seconds: 5), () {
+      valueChange.value = 'aku ganti';
+    },);
+    Get.log('DashboardController onReady');
     super.onReady();
   }
 

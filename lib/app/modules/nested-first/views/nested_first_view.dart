@@ -7,6 +7,7 @@ import '../controllers/nested_first_controller.dart';
 
 class NestedFirstView extends GetView<NestedFirstController> {
   const NestedFirstView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,13 +15,15 @@ class NestedFirstView extends GetView<NestedFirstController> {
         title: const Text('NestedFirstView'),
         centerTitle: true,
       ),
-      body:  Center(
+      body: Center(
         child: Column(
           children: [
-            const Text(
-              'NestedFirstView is working',
-              style: TextStyle(fontSize: 20),
-            ),
+            Obx(() {
+              return Text(
+                'NestedFirstView is working ${controller.count.value}',
+                style: const TextStyle(fontSize: 20),
+              );
+            }),
             ElevatedButton(
               child: const Text('Outher Page'),
               onPressed: () => Get.toNamed(Routes.OUTHER_PAGE),

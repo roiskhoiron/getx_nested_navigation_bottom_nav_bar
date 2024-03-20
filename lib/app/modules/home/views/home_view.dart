@@ -12,9 +12,9 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Navigator(
-        key: Get.nestedKey(1),
+        key: Get.nestedKey(Routes.NESTED_NAV_KEY),
         initialRoute: Routes.DASHBOARD,
-        onGenerateRoute: controller.onGenerateRoute,
+        onGenerateRoute: (settings) =>  controller.onGenerateRoute(settings),
         transitionDelegate: DefaultTransitionDelegate(),
       ),
       bottomNavigationBar: Obx(
@@ -40,7 +40,7 @@ class HomeView extends GetView<HomeController> {
           currentIndex: controller.currentIndex.value,
           selectedItemColor: Colors.pink,
           unselectedItemColor: Colors.grey,
-          onTap: controller.changePage,
+          onTap:(value) =>  controller.changePage(value),
         ),
       ),
     );

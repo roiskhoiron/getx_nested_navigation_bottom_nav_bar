@@ -10,7 +10,9 @@ class NestedFirstController extends GetxController {
   }
 
   @override
-  void onReady() {
+  Future<void> onReady() async {
+    await Future.delayed(Duration(seconds: 2));
+    count.value++;
     super.onReady();
   }
 

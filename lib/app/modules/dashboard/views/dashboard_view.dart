@@ -6,6 +6,7 @@ import '../controllers/dashboard_controller.dart';
 
 class DashboardView extends GetView<DashboardController> {
   const DashboardView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,11 +15,13 @@ class DashboardView extends GetView<DashboardController> {
         centerTitle: true,
         leading: Container(),
       ),
-      body: const Center(
-        child: Text(
-          'DashboardView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Center( 
+        child: Obx(() {
+          return Text(
+            'DashboardView is working ${controller.valueChange.value}',
+            style: const TextStyle(fontSize: 20),
+          );
+        }),
       ),
     );
   }

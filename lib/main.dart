@@ -8,6 +8,7 @@ void main() {
   runApp(
     GetMaterialApp(
       title: "Application",
+      enableLog: true,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     ),

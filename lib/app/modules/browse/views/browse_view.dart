@@ -6,6 +6,7 @@ import '../controllers/browse_controller.dart';
 
 class BrowseView extends GetView<BrowseController> {
   const BrowseView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,11 +15,13 @@ class BrowseView extends GetView<BrowseController> {
         centerTitle: true,
         leading: Container(),
       ),
-      body: const Center(
-        child: Text(
-          'BrowseView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Center(
+        child: Obx(() {
+          return Text(
+            'BrowseView is working ${controller.count.value}',
+            style: TextStyle(fontSize: 20),
+          );
+        }),
       ),
     );
   }
