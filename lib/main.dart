@@ -10,6 +10,7 @@ void main() {
       title: "Application",
       enableLog: true,
       initialRoute: AppPages.INITIAL,
+      defaultTransition: Transition.noTransition,
       getPages: AppPages.routes,
     ),
   );

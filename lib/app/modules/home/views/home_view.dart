@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/default_transitions.dart';
 
 import '../../../routes/app_pages.dart';
+import '../../../shared/NoTransitionDelegeate.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -15,7 +16,7 @@ class HomeView extends GetView<HomeController> {
         key: Get.nestedKey(Routes.NESTED_NAV_KEY),
         initialRoute: Routes.DASHBOARD,
         onGenerateRoute: (settings) =>  controller.onGenerateRoute(settings),
-        transitionDelegate: DefaultTransitionDelegate(),
+        transitionDelegate: NoAnimationTransitionDelegate(),
       ),
       bottomNavigationBar: Obx(
             () => BottomNavigationBar(
